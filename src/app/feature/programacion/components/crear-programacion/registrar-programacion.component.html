@@ -1,0 +1,68 @@
+<h1>Registrar Programacion</h1>
+<h3>Ejemplo validacion de formularios reactivos con directiva</h3>
+<form [formGroup]="programacionForm" (ngSubmit)="crear()">
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Id:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="idprogramacion" name="idprogramacion" placeholder="Id programacion" class="form-control"
+        formControlName="idprogramacion">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>clase:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="clase" name="clase" placeholder="Clase"
+        class="form-control" formControlName="clase">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Aprendiz:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="aprendiz" name="aprendiz" placeholder="Aprendiz" class="form-control"
+        formControlName="aprendiz">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Instructor:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="instructor" name="instructor" placeholder="Instructor"
+        class="form-control" formControlName="instructor">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Fecha:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="fecha" name="fecha" placeholder="Fecha" class="form-control"
+        formControlName="fecha">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Hora:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="hora" name="hora" placeholder="Hora"
+        class="form-control" formControlName="hora">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Asistencia:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="asistencia" name="asistencia" placeholder="Asistencia" class="form-control"
+        formControlName="asistencia">
+    </div>
+  </div>
+  <button id="botonGuardar">Guardar</button>
+</form>

@@ -1,0 +1,5 @@
+<nav>
+  <a *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+  <a routerLink="/registropr"><i class="fa-solid fa-circle-plus"></i></a>
+  <a routerLink="/registroap"><i class="fa-solid fa-person-circle-plus"></i></a>
+</nav>

@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Documento</th>
+        <th scope="col">Eps</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Valor Curso</th>
+        <th scope="col">Abono</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Aprobar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listaAprendices">
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>{{item.tipodoc}}</td>
+        <td>{{item.documento}}</td>
+        <td>{{item.eps}}</td>
+        <td>{{item.categoria}}</td>
+        <td>{{item.valorcurso}}</td>
+        <td>{{item.abono}}</td>
+        <td><button class="btn btn.outline-warning" routerLink="home"><i class="fa-solid fa-pen-to-square"></i></button></td>
+        <td><button class="btn btn.outline-warning" routerLink="home"><i class="fa-solid fa-circle-check"></i></button></td>
+      </tr>
+  </table>
