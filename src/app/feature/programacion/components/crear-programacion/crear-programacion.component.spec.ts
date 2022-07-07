@@ -7,7 +7,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpService } from 'src/app/core/services/http.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RegistrarProgramacionComponent } from './registrar-programacion.component';
-import { ProgramacionService } from '../../shared/service/programacion.service';
+import { ProgramacionService } from '@programacion/shared/service/programacion.service';
+
 
 describe('RegistrarProgramacionComponent', () => {
   let component: RegistrarProgramacionComponent;
@@ -49,8 +50,12 @@ describe('RegistrarProgramacionComponent', () => {
 
   it('Registrando programacion', () => {
     expect(component.programacionForm.valid).toBeFalsy();
-    component.programacionForm.controls.id.setValue('001');
-    component.programacionForm.controls.email.setValue('Programacion test');
+    component.programacionForm.controls.clase.setValue(1);
+    component.programacionForm.controls.aprendiz.setValue(1);
+    component.programacionForm.controls.instructor.setValue(1);
+    component.programacionForm.controls.fecha.setValue('2022-07-02');
+    component.programacionForm.controls.hora.setValue('13:36 pm');
+    component.programacionForm.controls.asistencia.setValue('si');
     expect(component.programacionForm.valid).toBeTruthy();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));
@@ -61,7 +66,7 @@ describe('RegistrarProgramacionComponent', () => {
   });
   it('No Registrar programacion', () => {
     expect(component.programacionForm.valid).toBeFalsy();
-    component.programacionForm.controls.id.setValue('001');
+    component.programacionForm.controls.clase.setValue(1);
     expect(component.programacionForm.valid).toBeFalsy();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));

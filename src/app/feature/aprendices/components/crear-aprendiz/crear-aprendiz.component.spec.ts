@@ -49,8 +49,14 @@ describe('RegistrarAprendizComponent', () => {
 
   it('Registrando aprendiz', () => {
     expect(component.aprendizForm.valid).toBeFalsy();
-    component.aprendizForm.controls.id.setValue('001');
-    component.aprendizForm.controls.email.setValue('aprendiz test');
+    component.aprendizForm.controls.nombre.setValue('carolina');
+    component.aprendizForm.controls.apellido.setValue('fonseca');
+    component.aprendizForm.controls.tipodoc.setValue('CC');
+    component.aprendizForm.controls.documento.setValue('1000791524');
+    component.aprendizForm.controls.eps.setValue('Sanitas');
+    component.aprendizForm.controls.categoria.setValue('B1');
+    component.aprendizForm.controls.valorcurso.setValue(1500000.0);
+    component.aprendizForm.controls.abono.setValue(750000.0);
     expect(component.aprendizForm.valid).toBeTruthy();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));
@@ -61,7 +67,7 @@ describe('RegistrarAprendizComponent', () => {
   });
   it('No Registrar aprendiz', () => {
     expect(component.aprendizForm.valid).toBeFalsy();
-    component.aprendizForm.controls.id.setValue('001');
+    component.aprendizForm.controls.nombre.setValue('carolina');
     expect(component.aprendizForm.valid).toBeFalsy();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));
