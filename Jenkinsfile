@@ -13,7 +13,7 @@ pipeline {
 
   //Una sección que define las herramientas “preinstaladas” en Jenkins
   tools {
-    jdk 'JDK17_Centos' //Verisión preinstalada en la Configuración del Master
+	nodejs "NodeJS14"
   }
 /*	Versiones disponibles
       JDK8_Mac
@@ -53,6 +53,13 @@ pipeline {
       steps {
         echo "------------>Testing<------------"
         sh 'npm run test -- --watch=false --browsers ChromeHeadless'
+      }
+    }
+
+    stage('Test end-to-end') {
+      steps{
+        echo "------------>Testing Protractor<------------"
+	      sh 'npm run e2e'
       }
     }
 
