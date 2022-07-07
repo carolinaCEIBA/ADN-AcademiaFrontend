@@ -57,6 +57,7 @@ describe('RegistrarProgramacionComponent', () => {
     component.programacionForm.controls.hora.setValue('13:36 pm');
     component.programacionForm.controls.asistencia.setValue('si');
     expect(component.programacionForm.valid).toBeTruthy();
+    expect(component.programacionForm).not.toBeNull();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));
     component.crear();
@@ -66,7 +67,7 @@ describe('RegistrarProgramacionComponent', () => {
   });
   it('No Registrar programacion', () => {
     expect(component.programacionForm.valid).toBeFalsy();
-    component.programacionForm.controls.clase.setValue(1);
+    component.programacionForm.controls.clase.setValue("");
     expect(component.programacionForm.valid).toBeFalsy();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));

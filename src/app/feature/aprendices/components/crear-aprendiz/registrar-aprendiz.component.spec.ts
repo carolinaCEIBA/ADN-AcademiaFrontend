@@ -55,8 +55,8 @@ describe('RegistrarAprendizComponent', () => {
     component.aprendizForm.controls.documento.setValue('1000791524');
     component.aprendizForm.controls.eps.setValue('Sanitas');
     component.aprendizForm.controls.categoria.setValue('B1');
-    component.aprendizForm.controls.valorcurso.setValue(1500000.0);
-    component.aprendizForm.controls.abono.setValue(750000.0);
+    component.aprendizForm.controls.valorcurso.setValue(1500000);
+    component.aprendizForm.controls.abono.setValue(750000);
     expect(component.aprendizForm.valid).toBeTruthy();
 
     spyOn(window, 'alert').and.callFake(()=>console.log('ejecuto alert'));

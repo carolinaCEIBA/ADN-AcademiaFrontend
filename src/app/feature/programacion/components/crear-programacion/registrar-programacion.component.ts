@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgramacionService } from '../../shared/service/programacion.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registrar-programacion',
@@ -25,13 +25,12 @@ export class RegistrarProgramacionComponent implements OnInit {
 
   private construirFormularioProgramacion() {
     this.programacionForm = new FormGroup({
-      idprogramacion: new FormControl(''),
-      clase: new FormControl(''),
-      aprendiz: new FormControl(''),
-      instructor: new FormControl(''),
-      fecha: new FormControl(''),
-      hora: new FormControl(''),
-      asistencia: new FormControl('')
+      clase: new FormControl('', [Validators.required]),
+      aprendiz: new FormControl('', [Validators.required]),
+      instructor: new FormControl('', [Validators.required]),
+      fecha: new FormControl('', [Validators.required]),
+      hora: new FormControl('', [Validators.required]),
+      asistencia: new FormControl('', [Validators.required])
     });
   }
 
