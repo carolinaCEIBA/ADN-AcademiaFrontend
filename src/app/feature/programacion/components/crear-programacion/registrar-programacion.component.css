@@ -1,0 +1,33 @@
+h1 {
+    display: inline;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: fantasy;
+    letter-spacing: 0.3px;
+    line-height: 60px;
+  }
+
+  form {
+    width: 60%;
+    border: thick double;
+    border-radius: 2%;
+    border-color: #0C1850;
+    background-color: #32a1ce;
+    margin: 0 auto;
+  }
+
+  .row{
+    padding-top: 2%;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+
+  form button{
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  
+  .contenedor{
+    text-align: center;
+  }

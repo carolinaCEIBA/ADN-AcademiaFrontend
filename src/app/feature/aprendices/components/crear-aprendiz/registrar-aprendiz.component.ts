@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl} from '@angular/forms';
 import { AprendizService } from '../../shared/service/aprendiz.service';
 
 
@@ -27,14 +27,14 @@ export class RegistrarAprendizComponent implements OnInit {
   private construirFormularioAprendiz() {
     this.aprendizForm = new FormGroup({
       id: new FormControl(''),
-      nombre: new FormControl('', [Validators.required]),
-      apellido: new FormControl('', [Validators.required]),
-      tipodoc: new FormControl('', [Validators.required]),
-      documento: new FormControl('', [Validators.required]),
-      eps: new FormControl('', [Validators.required]),
-      categoria: new FormControl('', [Validators.required]),
-      valorcurso: new FormControl('', [Validators.required]),
-      abono: new FormControl('', [Validators.required])
+      nombre: new FormControl(''),
+      apellido: new FormControl(''),
+      tipodoc: new FormControl(''),
+      documento: new FormControl(''),
+      eps: new FormControl(''),
+      categoria: new FormControl(''),
+      valorcurso: new FormControl(''),
+      abono: new FormControl('')
 
     });
   }

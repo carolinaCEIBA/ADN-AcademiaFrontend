@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-toolbar',
   templateUrl: 'toolbar.component.html',
   styles: [`:host {
-    background-color: #4253A4;
+    background-color: #0C1850;
     color: rgba(255, 255, 255, 0.87);
     display: block;
     height: 70px;
@@ -13,10 +13,11 @@ import { Component } from '@angular/core';
 
   h1 {
     display: inline;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: normal;
-    letter-spacing: 0.1px;
-    line-height: 48px;
+    font-family: fantasy;
+    letter-spacing: 0.3px;
+    line-height: 60px;
   }
 
   .more {
