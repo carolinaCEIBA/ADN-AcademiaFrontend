@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Programacion } from '@programacion/shared/model/programacion';
 import { ProgramacionService } from '@programacion/shared/service/programacion.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-programacion',
@@ -9,14 +10,12 @@ import { ProgramacionService } from '@programacion/shared/service/programacion.s
 })
 export class ListarProgramacionComponent implements OnInit {
 
-  public listaProgramacion: Programacion[] = [];
+  public listaProgramacion: Observable<Programacion[]>;
 
   constructor(protected programacionService: ProgramacionService) { }
 
   ngOnInit(): void {
-    this.programacionService.consultar().subscribe(
-      data=> {this.listaProgramacion = data}
-    );
+    this.listaProgramacion = this.programacionService.consultar();
   }
 
 }

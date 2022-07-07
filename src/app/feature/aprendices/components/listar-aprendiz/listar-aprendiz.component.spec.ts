@@ -58,4 +58,11 @@ describe('ListarAprendizComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should create', () => {
+    expect(component).toBeTruthy();
+    component.listaAprendices.subscribe(resultado => {
+      expect(2).toBe(resultado.length);
+    });
+  });
+
 });

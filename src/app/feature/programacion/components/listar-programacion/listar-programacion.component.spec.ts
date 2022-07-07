@@ -51,4 +51,12 @@ describe('ListarProgramacionComponent', () => {
     );
     fixture.detectChanges();
   });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+    component.listaProgramacion.subscribe(resultado => {
+      expect(2).toBe(resultado.length);
+    });
+  });
+
 });

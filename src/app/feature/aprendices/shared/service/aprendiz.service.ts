@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '@core-service/http.service';
+import { map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Aprendiz } from '../model/aprendiz';
 
@@ -11,6 +12,7 @@ export class AprendizService {
 
   public consultar() {
     return this.http.doGet<Aprendiz[]>(`${environment.endpoint}/resumenAprendices`)
+    .pipe(map((response: any) => response.data as Aprendiz[]));
   }
 
   public guardar(aprendiz: Aprendiz) {

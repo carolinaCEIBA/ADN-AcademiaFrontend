@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Aprendiz } from '../../shared/model/aprendiz';
 import { AprendizService } from '../../shared/service/aprendiz.service';
@@ -10,14 +11,12 @@ import { AprendizService } from '../../shared/service/aprendiz.service';
 })
 export class ListarAprendizComponent implements OnInit {
 
-  public listaAprendices: Aprendiz[] = [];
+  public listaAprendices: Observable<Aprendiz[]>;
 
   constructor(protected aprendizService: AprendizService) { }
 
   ngOnInit() {
-    this.aprendizService.consultar().subscribe(
-      data=> {this.listaAprendices = data}
-    );
+    this.listaAprendices = this.aprendizService.consultar();
   }
 
 }
