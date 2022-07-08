@@ -1,0 +1,15 @@
+.card{
+    background-color: #32a1ce;
+    border: thick double;
+    border-radius: 2%;
+    border-color: #0C1850;
+    margin-left: 2%;
+    font-weight:500;
+
+}
+
+.contenedor{
+    padding-top: 3%;
+    text-align: center;
+    margin-left: 3%;
+}
